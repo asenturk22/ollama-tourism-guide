@@ -1,6 +1,6 @@
 # 🏛️ Akıllı Turizm Rehberi
 
-Türkiye özelinde geliştirilmiş, LLAMA 3.2 3B modeli ile çalışan akıllı turizm rehberi uygulaması. Kullanıcılar yazılı olarak soru sorabilir ve gerçek zamanlı, doğal yanıtlar alabilir.
+Türkiye özelinde geliştirilmiş, LLAMA 3.2 3B modeli ile çalışan akıllı turizm rehberi uygulaması.  **İki farklı versiyonu** bulunmaktadır: Terminal tabanlı ve Web tabanlı (Streamlit).  Kullanıcılar yazılı olarak soru sorabilir ve gerçek zamanlı, doğal yanıtlar alabilir.
 
 ## 🚀 Versiyon Seçenekleri
 
@@ -18,23 +18,41 @@ Türkiye özelinde geliştirilmiş, LLAMA 3.2 3B modeli ile çalışan akıllı 
 - Model seçimi ve ayar seçenekleri
 - Son kullanıcılar için ideal
 
+### ⚡ Streaming Web Versiyonu(streamlit_tourism_bot_streaming.py)
+
+- **Canlı metin akışı** - Yanıtlar kelime kelime görünür
+- **Real-time deneyim** - ChatGPT benzeri etkileşim
+- **Gelişmiş UX** - Daha dinamik ve etkileyici
+- **Custom streaming handler** - Streamlit için optimize edilmiş
+
+
 ## 📋 Ortak Özellikler
 
-- 🏺 Tarihi Yerler: Türkiye'nin tarihi mekanları hakkında detaylı bilgi
-- 🎭 Kültürel Etkinlikler: Yerel festivaller ve kültürel aktiviteler
-- 🍽️ Yöresel Yemekler: Şehirlere özel lezzetler ve tarifler
-- 🚌 Ulaşım Bilgileri: Şehirler arası ve şehir içi ulaşım rehberi
-- 💬 Gerçek Zamanlı Sohbet: Doğal dil işleme ile akıcı konuşma
-- 🧠 Konuşma Hafızası: Önceki mesajları hatırlayan akıllı sistem
+- 🏺 **Tarihi Yerler**: Türkiye'nin tarihi mekanları hakkında detaylı bilgi
+- 🎭 **Kültürel Etkinlikler**: Yerel festivaller ve kültürel aktiviteler
+- 🍽️ **Yöresel Yemekler**: Şehirlere özel lezzetler ve tarifler
+- 🚌 **Ulaşım Bilgileri**: Şehirler arası ve şehir içi ulaşım rehberi
+- 💬 **Gerçek Zamanlı Sohbet**: Doğal dil işleme ile akıcı konuşma
+- 🧠 **Konuşma Hafızası**: Önceki mesajları hatırlayan akıllı sistem
 
 ## ✨ Web Versiyonu Ek Özellikleri
 
-- 🎨 Modern Arayüz: Streamlit ile responsive tasarım
-- ⚙️ Model Seçimi: llama3.2:3b, llama3.2:1b, llama3.1:8b seçenekleri
-- 🎚️ Üretkenlik Kontrolü: Temperature ayarı (0.0-1.0)
-- 🗑️ Sohbet Yönetimi: Geçmişi temizleme butonu
-- 🔧 Hata Yönetimi: Gelişmiş hata yakalama sistemi
-- 💾 Session Yönetimi: Web tabanlı hafıza sistemi
+### 🌐 Standart Web Versiyonu
+
+- 🎨 **Modern Arayüz**: Streamlit ile responsive tasarım
+- ⚙️ **Model Seçimi**: llama3.2:3b, llama3.2:1b, llama3.1:8b seçenekleri
+- 🎚️ **Üretkenlik Kontrolü**: Temperature ayarı (0.0-1.0)
+- 🗑️ **Sohbet Yönetimi**: Geçmişi temizleme butonu
+- 🔧 **Hata Yönetimi**: Gelişmiş hata yakalama sistemi
+- 💾 **Session Yönetimi**: Web tabanlı hafıza sistemi
+
+### ⚡ Streaming Web Versiyonu :
+
+- 🔥 **Canlı Metin Akışı**: Yanıtlar kelime kelime real-time görünür
+- 💬 **ChatGPT Benzeri UX**: Modern sohbet deneyimi
+- ⚡ **Dinamik Etkileşim**: Anında geri bildirim
+- 🎭 **Custom Stream Handler**: Streamlit için özel geliştirilmiş
+- 🚀 **Gelişmiş Performans**: Daha hızlı ve etkileyici yanıtlar
 
 ## 🛠️ Gereksinimler
 
@@ -43,6 +61,7 @@ Türkiye özelinde geliştirilmiş, LLAMA 3.2 3B modeli ile çalışan akıllı 
 - Python 3.8+
 - En az 4GB RAM
 - 2GB boş disk alanı (model için)
+- Ollama servisi
 
 ### Python Kütüphaneleri
 
@@ -117,6 +136,9 @@ touch terminal_tourist_bot.py
 
 # Web versiyonu  
 touch streamlit_tourist_bot.py
+
+# Web versiyonu (streaming)
+touch streamlit_tourism_bot_streaming.py
 ```
 
 #### Proje Dosyası Oluşturma
@@ -146,6 +168,9 @@ python terminal_tourist_bot.py
 
 # web versiyonunu calistirmak icin
 streamlit run streamlit_tourist_bot.py
+
+# web versiyonu(streaming) calistirmak icin
+streamlit run streamlit_tourism_bot_streaming.py
 ```
 
 Web versiyonu varsayılan olarak [http://localhost:8501](http://localhost:8501) adresinde açılacaktır.
@@ -201,13 +226,15 @@ SystemMessage(content = "Sen bir akıllı turizm rehberisin..."
 )
 ```
 
-## 🔄 Gelecek Geliştirmeler
+## Tamamlanan Geliştirmeler
 
- - Streamlit web arayüzü eklenmesi
- - Görsel destekli yanıtlar
- - Konum bazlı öneriler
- - Çoklu dil desteği
- - Rezervasyon entegrasyonu
+ - **Terminal Versiyonu**: Basit komut satırı arayüzü
+ - **Statik Web Arayüzü**: Streamlit ile modern tasarım
+ - **Streaming Web Arayüzü**: Real-time metin akışı 🆕
+ - **Model Seçimi**: Farklı LLAMA model versiyonları
+ - **Sohbet Hafızası**: Konuşma geçmişi takibi
+ - **Hata Yönetimi**: Gelişmiş hata yakalama
+ - **Custom Streaming**: Streamlit için özel callback handler 🆕
 
 ## 📚 Ek Kaynaklar
 
@@ -221,6 +248,4 @@ SystemMessage(content = "Sen bir akıllı turizm rehberisin..."
 Bu proje açık kaynak kodlu olarak geliştirilmiştir.
 
 
-
-https://www.youtube.com/playlist?list=PLQoYY0GU_Tk9tFLVZWeVjor4J9x1Wyi7Q
 
